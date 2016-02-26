@@ -26,8 +26,8 @@ Repositório remoto
 Para adicionar o repositorio remoto: git remote add nomerepositorioremoto urldorepositorio
 Para visualizar os repositorios remotos já adicinados: git remote
 
-git pull nome_do_repositorio_local nome_da_branch = Para trazer alterações do repositório remoto para o local
-git push nome_do_repositorio_local nome_da_branch = Para enviar alterações do repositório local para o remoto
+git pull nome_do_repositorio_remoto nome_da_branch = Para trazer alterações do repositório remoto para o local
+git push nome_do_repositorio_remoto nome_da_branch = Para enviar alterações do repositório local para o remoto
 
 
 Repositório local
