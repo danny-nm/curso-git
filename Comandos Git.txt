@@ -1,0 +1,58 @@
+﻿Comandos Git:
+
+Repositório local
+Indicar novo repositório: git init
+Mostrar arquivos do repositório: git ls-files
+Para vê oquê foi alterado: git status
+Para adicionar para commit: git add nomearquivo
+mostrava os responsáveis por cada linha de código: git blame
+
+informar ao Git o nosso nome e e-mail: 
+git config user.name "Hugo Henrique de Souza"
+git config user.email "hugo.h.s@hotmail.com"
+
+deixando esta configuração global: 
+git config --global user.name "João Carlos Fonseca"
+git config --global user.email "jcfonsecagit@gmail.com"
+
+Para Commitar: git commit -m "Comentário"
+
+Mostrar todos os commits: git log
+Mostrar Todos os commits com detalhes: git whatchanged
+Mostrar todos os commits com mais detalhes ainda: git whatchanged -p
+
+
+Repositório remoto
+Para adicionar o repositorio remoto: git remote add nomerepositorioremoto urldorepositorio
+Para visualizar os repositorios remotos já adicinados: git remote
+
+git pull nome_do_repositorio_local nome_da_branch = Para trazer alterações do repositório remoto para o local
+git push nome_do_repositorio_local nome_da_branch = Para enviar alterações do repositório local para o remoto
+
+
+Repositório local
+Criar uma nova Branch: git branch design
+Listar Branches: git branch
+Trocando o ambiente atual para a branch desejada: git checkout nomedabranch
+Criando Branch e mudando ambiente atual: git checkout -b nomedabranch
+Excluindo uma branch: git branch -d design
+
+Repositório remoto
+Criar branch remota e criar ligação entre branch local e remota: git push -u nomerepositorioremoto nomebranch
+Listando branches remota: git branch -r
+Listando branches remota e locais: git branch -a
+Cria nova Branch local, copia branch remota e trackeia as duas branches: git checkout -t nomerepositorioremoto/branchremota
+Exclui repositório remoto: git push nomerepositorioremoto :nomebranchremoto
+verificar todas as atualizações que foram realizadas no repositório: git fetch origin
+
+
+git mergetool = Mostra no console uma lista de programas possiveis de serem utilizados para resolver conflitos.
+git mergetool -t nome_do_programa = Dessa lista, pode-se escolher um e instalar no seu computador
+git mergetool --help = Para visualizar o manual
+
+git rebase nome_da_branch = No ambiente atual indica que nova base dela é o último commit que está na que foi passada no comando.
+Ex: git checkout desenvolvimento (Estou no ambiente(branch) desenvolvimento) quero que venha os commits da master para a branch desenvolvimento: git rebase master.
+
+git merge nome_da_branch = No ambiente atual junta as alterações com a branch passada no comando.
+
+Para isso, temos que ir à branch "desenvolvimento" com o comando git checkout desenvolvimento e dizer que a nova base dela é o último commit que está na master
