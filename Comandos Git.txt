@@ -56,3 +56,18 @@ Ex: git checkout desenvolvimento (Estou no ambiente(branch) desenvolvimento) que
 git merge nome_da_branch = No ambiente atual junta as alterações com a branch passada no comando.
 
 Para isso, temos que ir à branch "desenvolvimento" com o comando git checkout desenvolvimento e dizer que a nova base dela é o último commit que está na master
+
+git checkout nomearquivo = as alterações no arquivo que estão no Working Directory serão descartadas.
+git checkout -- arquivo = mesma coisa que o de cima mas para diferenciar o nome do arquivo com o nome da branch, caso for iguais.
+
+git reset HEAD nomearquivo = as alterações no arquivo que estão no Index serão revertidas para o Working Directory.
+
+git reset hashdocommit = as alterações serão revertidas para o commit da hash fornecida no comando.
+git reset HEAD~1 = faz referencia ao ultimo commit e será revertido para o mesmo.
+
+git reset --hard HEAD~1 = as alterações no último commit serão descartadas.
+git stash = as alterações que estão no Working Directory e Index serão salvas, retornando o estado para o último commit.
+git stash pop = o último estado salvo será recuperado e deletado da lista de stashs.
+git stash apply = o último estado salvo será recuperado, mas não será deletado da lista de stashs.
+git stash drop = o último estado salvo será deletado
+git stash clear = deleta todos os estados.
