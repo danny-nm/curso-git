@@ -20,6 +20,9 @@ Para Commitar: git commit -m "Comentário"
 Mostrar todos os commits: git log
 Mostrar Todos os commits com detalhes: git whatchanged
 Mostrar todos os commits com mais detalhes ainda: git whatchanged -p
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
 
 
 Repositório remoto
@@ -52,6 +55,7 @@ git mergetool --help = Para visualizar o manual
 
 git rebase nome_da_branch = No ambiente atual indica que nova base dela é o último commit que está na que foi passada no comando.
 Ex: git checkout desenvolvimento (Estou no ambiente(branch) desenvolvimento) quero que venha os commits da master para a branch desenvolvimento: git rebase master.
+Posso passar também as duas branch: git rebase master nomebranch. Passei as alterações da branch para a master
 
 git merge nome_da_branch = No ambiente atual junta as alterações com a branch passada no comando.
 
@@ -71,3 +75,6 @@ git stash pop = o último estado salvo será recuperado e deletado da lista de s
 git stash apply = o último estado salvo será recuperado, mas não será deletado da lista de stashs.
 git stash drop = o último estado salvo será deletado
 git stash clear = deleta todos os estados.
+
+git cherry-pick hashdocommit = comita apenas o commit do hash passado.
+git cherry-pick abcd..1234 = comita uma range de commits, passando o começo do hash do commit inicial e o final do hash do commit final.
